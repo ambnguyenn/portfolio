@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
@@ -104,4 +104,169 @@ a {
   html {
     color-scheme: dark;
   }
+} */
+
+.navbar {
+  font-family: 'Roboto', sans-serif; /* Or any font similar to the one in your image */
 }
+
+.navbar-brand {
+  font-size: 2.5rem !important;
+  font-weight: bold;
+}
+
+.nav-link {
+  margin-right: 1rem;
+  font-size: 1.3rem;
+}
+
+.navbar-nav .nav-item .nav-link i {
+  font-size: 1.2rem;
+}
+
+/* .navbar-nav .nav-item .nav-link:hover {
+  text-decoration: underline;
+} */
+
+.profile-image img {
+  width: 325px; /* Full width of the column */
+  height: 450px; /* Maintain aspect ratio */
+  border-radius: 50%; /* Creates the oval shape */
+  object-fit: cover;
+  border: 5px white solid
+}
+
+.profile-text h2 {
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .profile-text h2 {
+      font-size: 2rem; /* Increase font size on medium screens */
+  }
+  .bio {
+    font-size: 1.2rem; /* Slight increase for medium screens */
+  }
+}
+
+@media (min-width: 992px) {
+  .profile-text h2 {
+      font-size: 2.5rem; /* Increase font size on large screens */
+  }
+  .bio {
+    font-size: 1.4rem; /* Reasonable increase for large screens */
+  }
+}
+
+
+
+.container-fluid {
+  padding: 20px; /* Padding around the content */
+  border-radius: 50px; /* Rounded corners for the container */
+}
+
+@keyframes floatIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.float-in {
+  animation: floatIn 1s ease-out forwards;
+}
+
+/* Form container styling */
+#form-container {
+  padding-top: 15px;
+  background-color: #1C3A5F;
+  color: white;
+  border-radius: 8px;
+  width: 100%;
+}
+
+/* Row styling */
+#name-row,
+#email-row,
+#message-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+/* Input container styling */
+#first-name-container,
+#last-name-container,
+#email-container,
+#message-container {
+  flex: 1;
+  margin-right: 1rem;
+}
+
+#last-name-container,
+#email-container,
+#message-container {
+  margin-right: 0;
+}
+
+/* Input and textarea styling */
+#firstName,
+#lastName,
+#email,
+#message {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: black;
+}
+
+/* Label styling */
+#first-name-container label,
+#last-name-container label,
+#email-container label,
+#message-container label {
+  font-weight: bold;
+}
+
+/* Button styling */
+#submit-button-container {
+  text-align: right;
+}
+
+#submit-button-container button {
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#submit-button-container button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  /* Adjust rows for smaller screens */
+  #name-row {
+      flex-direction: column;
+  }
+
+  #first-name-container,
+  #last-name-container {
+      margin-right: 0;
+      margin-bottom: 1rem;
+  }
+}
+
