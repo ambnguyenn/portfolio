@@ -20,6 +20,7 @@ export default function ResumePage() {
               borderRadius: '8px', // Rounded corners for a softer look
             }}
             title="Resume"
+            className="resume-iframe"
           />
         </div>
       </div>

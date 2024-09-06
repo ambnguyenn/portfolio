@@ -281,3 +281,19 @@ a {
   }
 }
 
+@media (max-width: 768px) {
+  .resume-iframe {
+    width: 90%;
+    height: 2px;
+    border: 3px solid white; /* Adjust border for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .resume-iframe {
+    width: 100% !important;
+    height: 500px !important;
+    border: 2px solid white; /* Further adjustments for very small screens */
+  }
+}
+

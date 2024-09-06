@@ -16,8 +16,8 @@ export default function Portfolio() {
                             <Image 
                                 src="https://portfolio-images-1.s3.us-east-2.amazonaws.com/portfolio-img.jpg" 
                                 className="img-fluid" 
-                                width= {325} /* Full width of the column */
-                                height= {450} /* Maintain aspect ratio */
+                                width= {1500} /* Full width of the column */
+                                height= {1500} /* Maintain aspect ratio */
                                 id="mission-image" 
                                 alt="laptop with code" />
                         </div>
