@@ -1,6 +1,7 @@
 import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/footer/Footer'
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function ProjectsPage() {
 
@@ -43,16 +44,29 @@ export default function ProjectsPage() {
                   <p style={{ color: "#555", fontFamily: "Times New Roman" }}>
                     {project.description}
                   </p>
-                  <a
-                    href={project.link}
-                    style={{
-                      color: "#1C3A5F",
-                      fontWeight: "bold",
-                      textDecoration: "underline",
-                    }}
-                  >
-                    View Project
-                  </a>
+                  {project.link ? (
+                    <Link
+                      href={project.link}
+                      style={{
+                        color: "#1C3A5F",
+                        fontWeight: "bold",
+                        textDecoration: "underline",
+                      }}
+                    >
+                      View Project
+                    </Link>
+                  ) : (
+                    <span
+                      style={{
+                        color: "#1C3A5F",
+                        fontWeight: "bold",
+                        textDecoration: "underline",
+                        cursor: "not-allowed", // Optional: visually indicate it's not clickable
+                      }}
+                    >
+                      View Project
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>

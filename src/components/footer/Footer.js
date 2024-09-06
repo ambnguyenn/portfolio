@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 const Footer = () => {
     return (
@@ -14,22 +15,22 @@ const Footer = () => {
                 </div>
                 <div className="row justify-content-center mt-1">
                     <div className="d-flex justify-content-center">
-                        <a href="mailto:ambernguyen50@gmail.com" className="mx-2" target="_blank" style={{ color: "white", fontSize: "1.5rem" }}>
+                        <a href="mailto:ambernguyen50@gmail.com" className="mx-2" target="_blank" rel="noopener noreferrer" style={{ color: "white", fontSize: "1.5rem" }}>
                             <FontAwesomeIcon icon={faEnvelope} />
                         </a>
                         <a href="https://www.linkedin.com/in/ambnguyenn" className="mx-2" target="_blank" style={{ color: "white", fontSize: "1.5rem" }}>
                             <FontAwesomeIcon icon={faLinkedin} />
                         </a>
-                        <a href="https://github.com/ambnguyenn" className="mx-2" target="_blank" style={{ color: "white", fontSize: "1.5rem" }}>
+                        <a href="https://github.com/ambnguyenn" className="mx-2" target="_blank" rel="noopener noreferrer" style={{ color: "white", fontSize: "1.5rem" }}>
                             <FontAwesomeIcon icon={faGithub} />
                         </a>
                     </div>
                 </div>
 
                 <div className="row justify-content-center text-center mt-0">
-                    <a href="/" style={{ color: "white", fontSize: "2.5rem", fontWeight: "bold", fontFamily: "Roboto, sans-serif", textDecoration: "none" }}>
+                    <Link href="/" style={{ color: "white", fontSize: "2.5rem", fontWeight: "bold", fontFamily: "Roboto, sans-serif", textDecoration: "none" }}>
                         Amber Nguyen
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
