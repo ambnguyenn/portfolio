@@ -13,7 +13,7 @@ export default function ContactPage() {
             <h2 className="ps-2"style={{ color: "white", fontSize: "1.5rem", padding: "5px" }}>Please use this form to get in touch with me. Feel free to ask me any questions or reach out, and I'll get back to you soon!</h2>
             <img
               className="ps-2" 
-              src="/contactCat.png" 
+              src="https://portfolio-images-1.s3.us-east-2.amazonaws.com/contactCat.png" 
               alt="cat typing" 
               style={{ width: "60%", height:"60%"}}
             />

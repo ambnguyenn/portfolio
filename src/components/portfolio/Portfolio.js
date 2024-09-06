@@ -12,7 +12,7 @@ export default function Portfolio() {
                 <div className="container-fluid">
                     <div className="row align-items-center justify-content-center">
                         <div className="profile-image col-12 col-md-4 text-center text-md-end me-md-5 mb-4">
-                            <img src="/portfolio-img.jpg" className="img-fluid" id="mission-image" alt="laptop with code" />
+                            <img src="https://portfolio-images-1.s3.us-east-2.amazonaws.com/portfolio-img.jpg" className="img-fluid" id="mission-image" alt="laptop with code" />
                         </div>
                         <div className="profile-text col-12 col-md-6 text-center text-md-start" id="mission-statement">
                             <h2>

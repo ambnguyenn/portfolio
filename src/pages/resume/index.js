@@ -11,7 +11,7 @@ export default function ResumePage() {
         </div>
         <div className="col-12" style={{ textAlign: "center" }}>
           <iframe
-            src="/AmberNguyen_Resume.pdf"
+            src="https://portfolio-images-1.s3.us-east-2.amazonaws.com/AmberNguyen_Resume.pdf"
             style={{
               width: '70%',
               height: '700px',

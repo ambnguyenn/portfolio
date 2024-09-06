@@ -4,22 +4,23 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 export default function Navbar() {
     return ( 
-        <nav className="navbar navbar-expand-lg pt-5 pe-5 ps-5" style={{ backgroundColor: "#1C3A5F" }}>
-            <a className="navbar-brand ms-3 ms-md-5" href="/" style={{ color: "white" }}>
+        <nav className="navbar navbar-light navbar-expand-lg pt-5 pe-md-5 ps-md-5 ps-4 pe-4" style={{ backgroundColor: "#1C3A5F" }}>
+            <a className="navbar-brand" href="/" style={{ color: "white" }}>
                 Amber Nguyen
             </a>
             <button
-                className="navbar-toggler me-3 me-md-5"
+                className="navbar-toggler"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#navbarNav"
                 aria-controls="navbarNav"
                 aria-expanded="false"
                 aria-label="Toggle navigation"
+                style={{ border: "none" }}
             >
                 <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse justify-content-end me-5" id="navbarNav">
+            <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item">
                         <a className="nav-link" href="projects" style={{ color: "white", fontFamily: "Times New Roman, serif", fontSize: "1.2rem" }}>
