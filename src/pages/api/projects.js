@@ -1,16 +1,37 @@
-import { openDB } from '../../../lib/db';
-import { createRouter } from 'next-connect';
+import pool from '../../../lib/db';  // Import the MySQL connection pool
+import Cors from 'cors';
 
-const router = createRouter();
-
-router.get(async (req, res) => {
-  try {
-    const db = await openDB();
-    const projects = await db.all('SELECT * FROM projects');
-    res.json(projects);
-  } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch projects' });
-  }
+// Initialize the cors middleware
+const cors = Cors({
+  methods: ['GET', 'POST', 'HEAD'],
+  origin: '*',  // Or specify your localhost here, e.g., 'http://localhost:3000'
 });
 
-export default router.handler();
+// Helper method to wait for middleware to execute before moving to the next step
+function runMiddleware(req, res, fn) {
+  return new Promise((resolve, reject) => {
+    fn(req, res, (result) => {
+      if (result instanceof Error) {
+        return reject(result);
+      }
+      return resolve(result);
+    });
+  });
+}
+
+export default async function handler(req, res) {
+  // Run the middleware
+  await runMiddleware(req, res, cors);
+  try {
+    // Query the database using the connection pool
+    const [rows] = await pool.query('SELECT * FROM projects');
+    
+    // Send the result back to the frontend
+    res.status(200).json(rows);
+  } catch (error) {
+    console.error('Error fetching projects:', error);
+    res.status(500).json({ error: 'Error fetching projects' });
+  }
+}
+
+

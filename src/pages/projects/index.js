@@ -8,11 +8,16 @@ export default function ProjectsPage() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    //Fetch projects from the API when the component mounts
-    fetch('/api/projects')
+    // Use an environment variable to define the base URL for the API
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || '';
+  
+    // Fetch projects from the API when the component mounts
+    fetch(`${apiUrl}/api/projects`)
       .then((res) => res.json())
-      .then((data) => setProjects(data));
+      .then((data) => setProjects(data))
+      .catch((error) => console.error('Error fetching projects:', error));
   }, []);
+  
 
   return (
     <div style={{ backgroundColor: "#1C3A5F" }}>
