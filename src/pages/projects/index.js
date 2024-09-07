@@ -8,6 +8,7 @@ export default function ProjectsPage() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
+    // test 
     // Use an environment variable to define the base URL for the API
     const apiUrl = process.env.NEXT_PUBLIC_API_URL || '';
   
