@@ -86,6 +86,7 @@ export default function ContactForm() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
+                autoComplete="email"
                 required
               />
             </div>

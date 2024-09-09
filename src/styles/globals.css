@@ -178,21 +178,6 @@ a {
   border-radius: 50px; /* Rounded corners for the container */
 }
 
-@keyframes floatIn {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.float-in {
-  animation: floatIn 1s ease-out forwards;
-}
-
 /* Form container styling */
 #form-container {
   padding-top: 15px;
